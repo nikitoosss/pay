@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Перевод на мой номер</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #f7f8fc, #eef1f7);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: #333;
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      padding: 30px 20px;
+      max-width: 380px;
+      width: 90%;
+      text-align: center;
+    }
+    h1 {
+      font-size: 22px;
+      margin-bottom: 25px;
+    }
+    .btn {
+      display: block;
+      margin: 12px 0;
+      padding: 14px 18px;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 14px;
+      text-decoration: none;
+      text-align: center;
+      transition: transform 0.15s ease, opacity 0.2s;
+      color: white;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+    .sbp { background: #007bff; }
+    .psb { background: #ff6600; }
+    .tinkoff { background: #fddb00; color: #000; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Выберите способ перевода</h1>
+
+    <!-- Ссылка на СБП -->
+    <a href="https://www.tinkoff.ru/rm/r_VnCtUOMTtC.LvtQdURKfu/CWvZd13412" class="btn sbp">СБП</a>
+
+    <!-- Deep-link для Промсвязьбанка (только на смартфоне с приложением) -->
+    <a href="psb://payment?receiver=79901461544" class="btn psb">Промсвязьбанк</a>
+
+    <!-- Deep-link для Тинькофф (только на смартфоне с приложением) -->
+    <a href="tinkoff://transfer?phone=79901461544" class="btn tinkoff">Тинькофф</a>
+  </div>
+</body>
+</html>
