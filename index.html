@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поддержать переводом</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Arial", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #fff9e6;
+      color: #222;
+    }
+    .card {
+      text-align: center;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .card h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-sbp {
+      background: #ffdd2d;
+      color: #000;
+    }
+    .btn-phone {
+      background: #000;
+      color: #fff;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .small {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Поддержать переводом</h1>
+    <button class="btn btn-sbp" onclick="window.location.href='https://www.tinkoff.ru/rm/r_VnCtUOMTtC.LvtQdURKfu/CWvZd13412'">
+      Перевести через СБП
+    </button>
+    <button class="btn btn-phone" onclick="copyNumber()">
+      Перевести по номеру
+    </button>
+    <p class="small">Спасибо за поддержку 💛</p>
+  </div>
+
+  <script>
+    function copyNumber() {
+      const number = "+79901461544";
+      navigator.clipboard.writeText(number).then(() => {
+        alert("Номер " + number + " скопирован 📋");
+      });
+    }
+  </script>
+</body>
+</html>
